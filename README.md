@@ -38,3 +38,24 @@ PyTorch Lightning is the deep learning framework for professional AI researchers
   ![image](https://github.com/WeberSouzaWeb/Pytorch_Lightning/assets/107212929/9a86b91d-4054-4c62-9a31-b1480cf65adb)
   Esta função é muito útil porque quando a entrada é negativa a diferenciação da função não é zero. Portanto, o aprendizado dos neurônios não para.
 
+## Função de Ativação Sigmoid
+
+  A função Sigmoide é uma função de ativação não linear e diferenciável. É uma curva em forma de S que não passa pela origem. Ela produz uma saída que fica entre 0 e 1. Os valores de saída são frequentemente tratados como um probabilidade. É frequentemente usada para classificação binária. É lento na computação e, graficamente, a Sigmoid tem o seguinte comportamento transformativo:
+  ![image](https://github.com/WeberSouzaWeb/Pytorch_Lightning/assets/107212929/297b35ca-6814-4538-9b50-d2039551b11c)
+
+  A função de ativação sigmoíde tem um problema de "Vanishing Gradient". Vanishing Gradient é um problema significativo, pois um grande número de entradas é alimentada para a rede neural e o número de camadas ocultas aumenta, o gradiente ou derivada torna-se próximo de zero, levando à imprecisão na rede neural. Usamos a sigmóide em situações bem específicas.
+
+## Função de Ativação Tanh
+
+  A função Tanh é uma função não linear e diferenciável semelhante à função sigmóide, mas os valores de saída variam de -1 a +1. É uma curva em forma de S que passa pela origem e, graficamente Tanh tem o seguinte comportamento transformativo:
+  ![image](https://github.com/WeberSouzaWeb/Pytorch_Lightning/assets/107212929/fb04ab3c-af44-4e33-9e84-1733c024137a)
+
+O problema com a função Tanh é que ela é lenta e o problema do "Vanishing Gradient" persiste.
+
+O nn.Sequential envolve as camadas na rede. Existem três camadas lineares e duas camadas com função de ativação. A camada de saída é uma camada linear com a ativação LogSoftmax porque este é um problema de classificação. Tecnicamente, uma função LogSoftmax é o logaritmo de uma função Softmax como o nome indica e se parece com isso, conforme mostrado abaixo.
+
+![image](https://github.com/WeberSouzaWeb/Pytorch_Lightning/assets/107212929/7ce112df-912f-4500-bb05-750e86182177)
+
+Em seguida, define-se a perda de probabilidade logarítmica negativa (negative log-likelihood loss). Juntos, o LogSoftmax() e o NLLLoss() atuam como a perda de entropia cruzada, conforme mostrado no diagrama da arquitetura de rede acima.   (28 x 28 = 784)
+
+
