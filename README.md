@@ -13,6 +13,8 @@ PyTorch Lightning is the deep learning framework for professional AI researchers
 ## O que são Funções de Ativação?
   As funções de ativação são usadas em redes neurais para introduzir não linearidade em suas camadas.
 
+https://arxiv.org/abs/2101.09957 
+
   Em redes neurais profundas, as funções de ativação permitem que os modelos aprendam padrões complexos e abstrair informações úteis a partir do dados de entrada. Algumas das funções de ativação mais comuns incluem a ReLU (unidade linear retificada), a sigmóide e a tangente hiperbólica.
 
   A ReLU é uma função de ativação bastante popular, pois tem um bom desempenho e é fácil de implementar. Ela é definida como f(x) = max(0,x), ou seja, é simplesmente o valor máximo entre zero e o valor de entrada x.
